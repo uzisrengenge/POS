@@ -22,12 +22,8 @@ Route::get ('/', [HomeController::class,'index']);
 Route::prefix('product')->group(function(){
     Route::get ('/food-beverage', [ProductController::class,'foodBeverage']);
     Route::get ('/beauty-health', [ProductController::class,'beautyHealth']);
-    Route::get('profile', function(){
-        return 'admin profile';
-    });
-    Route::get('user', function(){
-        return 'admin user';
-    });
+    Route::get ('/home-care', [ProductController::class,'homeCare']);
+    Route::get ('/baby-kid', [ProductController::class,'babyKid']);
 });
 
 

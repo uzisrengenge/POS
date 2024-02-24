@@ -16,4 +16,14 @@ class ProductController extends Controller
     {
         return view('product.beauty-health');
     }
+    //home-care
+    public function homeCare()
+    {
+        return view('product.home-care');
+    }
+    //baby-kid
+    public function babyKid()
+    {
+        return view('product.baby-kid');
+    }
 }
