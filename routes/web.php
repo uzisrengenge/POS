@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,18 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get ('/', [HomeController::class,'index']);
+
+
+//buat route prefix
+Route::prefix('product')->group(function(){
+    Route::get ('/food-beverage', [ProductController::class,'foodBeverage']);
+    Route::get ('/beauty-health', [ProductController::class,'beautyHealth']);
+    Route::get('profile', function(){
+        return 'admin profile';
+    });
+    Route::get('user', function(){
+        return 'admin user';
+    });
+});
 
 
